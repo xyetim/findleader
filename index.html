@@ -12,8 +12,20 @@
                 </style>
                 <title>热股排行</title>
                 </head>
+                <script>
+                function send(code) {
+                if (code.substr(0, 1) == '6' || code.substr(0, 1) == '0' || code.substr(0, 1) == '3' || code.substr(0, 1) == '4' || code.substr(0, 1) == '8' || code.substr(0, 1) == '9') {
+                console.log('跳转到', code.substr(code.length - 6, 6));
+                if (window.location.protocol == 'file:') {
+                    fetch('http://127.0.0.1:9088/ws?code=' + code.substr(code.length - 6, 6))
+                } else {
+                    fetch('http://192.168.3.62:9088/ws?code=' + code.substr(code.length - 6, 6))
+                }
+                }
+                }
+                </script>
                 <body>
-                <h3>热股综合排名 [03-30 10:13]</h3>
+                <h3>热股综合排名 [03-30 10:46]</h3>
                 <table id="hot">
                     <tr>
                         <th>代码</th>
@@ -28,128 +40,128 @@
                     </tr>
                     
                     <tr>
-                        <td style="text-align: center;">871396</td>
+                        <td style="text-align: center;"><a style="text-decoration:none;color:inherit;" onclick=send("871396");>871396</a></td>
                         <td style="text-align: center;">常辅股份</td>
                         <td style="text-align: center;">7.66</td>
                         <td style="text-align: center;">0.70</td>
                         <td style="text-align: center;">0.86</td>
                         <td style="text-align: center;">1.03</td>
                         <td style="text-align: center;">2.16</td>
-                        <td>282←326←350</td>
+                        <td>276←326←350</td>
                         <td>核电 阀门 年报预增</td>
                     </tr>
                     
                     <tr>
-                        <td style="text-align: center;">000056</td>
+                        <td style="text-align: center;"><a style="text-decoration:none;color:inherit;" onclick=send("000056");>000056</a></td>
                         <td style="text-align: center;">皇庭国际</td>
                         <td style="text-align: center;">4.06</td>
                         <td style="text-align: center;">0.72</td>
                         <td style="text-align: center;">0.45</td>
                         <td style="text-align: center;">0.14</td>
                         <td style="text-align: center;">1.28</td>
-                        <td>130←157←139</td>
+                        <td>132←157←139</td>
                         <td>功率半导体 不动产运营管理 深圳</td>
                     </tr>
                     
                     <tr>
-                        <td style="text-align: center;">003010</td>
+                        <td style="text-align: center;"><a style="text-decoration:none;color:inherit;" onclick=send("003010");>003010</a></td>
                         <td style="text-align: center;">若羽臣</td>
                         <td style="text-align: center;">3.41</td>
                         <td style="text-align: center;">0.65</td>
                         <td style="text-align: center;">0.89</td>
                         <td style="text-align: center;">0.83</td>
                         <td style="text-align: center;">1.27</td>
-                        <td>152←118←87</td>
+                        <td>146←118←87</td>
                         <td>电商 消费品 年报预增</td>
                     </tr>
                     
                     <tr>
-                        <td style="text-align: center;">301082</td>
+                        <td style="text-align: center;"><a style="text-decoration:none;color:inherit;" onclick=send("301082");>301082</a></td>
                         <td style="text-align: center;">久盛电气</td>
                         <td style="text-align: center;">3.19</td>
                         <td style="text-align: center;">0.71</td>
                         <td style="text-align: center;">0.88</td>
                         <td style="text-align: center;">0.61</td>
                         <td style="text-align: center;">1.23</td>
-                        <td>75←80←71</td>
+                        <td>78←80←71</td>
                         <td>核电 防火类特种电缆 电力电缆</td>
                     </tr>
                     
                     <tr>
-                        <td style="text-align: center;">688068</td>
+                        <td style="text-align: center;"><a style="text-decoration:none;color:inherit;" onclick=send("688068");>688068</a></td>
                         <td style="text-align: center;">热景生物</td>
                         <td style="text-align: center;">3.49</td>
                         <td style="text-align: center;">0.67</td>
                         <td style="text-align: center;">0.71</td>
                         <td style="text-align: center;">0.52</td>
                         <td style="text-align: center;">1.23</td>
-                        <td>1355←1400←1561</td>
+                        <td>1406←1400←1561</td>
                         <td>创新药 体外诊断 阿尔兹海默</td>
                     </tr>
                     
                     <tr>
-                        <td style="text-align: center;">603353</td>
+                        <td style="text-align: center;"><a style="text-decoration:none;color:inherit;" onclick=send("603353");>603353</a></td>
                         <td style="text-align: center;">和顺石油</td>
                         <td style="text-align: center;">2.70</td>
                         <td style="text-align: center;">0.69</td>
                         <td style="text-align: center;">0.89</td>
                         <td style="text-align: center;">0.96</td>
                         <td style="text-align: center;">1.16</td>
-                        <td>88←92←80</td>
+                        <td>97←92←80</td>
                         <td>华为超充 加油站 光伏</td>
                     </tr>
                     
                     <tr>
-                        <td style="text-align: center;">838670</td>
+                        <td style="text-align: center;"><a style="text-decoration:none;color:inherit;" onclick=send("838670");>838670</a></td>
                         <td style="text-align: center;">恒进感应</td>
                         <td style="text-align: center;">2.61</td>
                         <td style="text-align: center;">0.67</td>
                         <td style="text-align: center;">0.74</td>
                         <td style="text-align: center;">0.44</td>
                         <td style="text-align: center;">1.05</td>
-                        <td>1707←1719←1895</td>
+                        <td>1801←1719←1895</td>
                         <td>工业母机 感应热处理</td>
                     </tr>
                     
                     <tr>
-                        <td style="text-align: center;">300611</td>
+                        <td style="text-align: center;"><a style="text-decoration:none;color:inherit;" onclick=send("300611");>300611</a></td>
                         <td style="text-align: center;">美力科技</td>
                         <td style="text-align: center;">2.44</td>
                         <td style="text-align: center;">0.67</td>
                         <td style="text-align: center;">0.61</td>
                         <td style="text-align: center;">0.62</td>
                         <td style="text-align: center;">1.01</td>
-                        <td>73←76←51</td>
+                        <td>69←76←51</td>
                         <td>人形机器人 弹簧 汽车零部件</td>
                     </tr>
                     
                     <tr>
-                        <td style="text-align: center;">002773</td>
+                        <td style="text-align: center;"><a style="text-decoration:none;color:inherit;" onclick=send("002773");>002773</a></td>
                         <td style="text-align: center;">康弘药业</td>
                         <td style="text-align: center;">2.28</td>
                         <td style="text-align: center;">0.67</td>
                         <td style="text-align: center;">0.70</td>
                         <td style="text-align: center;">0.49</td>
                         <td style="text-align: center;">0.98</td>
-                        <td>163←172←194</td>
+                        <td>167←172←194</td>
                         <td>创新药 抗肿瘤 眼科治疗</td>
                     </tr>
                     
                     <tr>
-                        <td style="text-align: center;">832982</td>
+                        <td style="text-align: center;"><a style="text-decoration:none;color:inherit;" onclick=send("832982");>832982</a></td>
                         <td style="text-align: center;">锦波生物</td>
                         <td style="text-align: center;">2.83</td>
                         <td style="text-align: center;">0.67</td>
                         <td style="text-align: center;">0.67</td>
                         <td style="text-align: center;">-0.84</td>
                         <td style="text-align: center;">0.95</td>
-                        <td>2124←2232←2552</td>
+                        <td>2157←2232←2552</td>
                         <td>-</td>
                     </tr>
                     
                 </table>
 
-                <h3>热股抗跌排名 [03-30 10:13]</h3>
+                <h3>热股抗跌排名 [03-30 10:46]</h3>
                 <table id="die">
                     <tr>
                         <th>代码</th>
@@ -164,122 +176,122 @@
                     </tr>
                     
                     <tr>
-                        <td style="text-align: center;">301025</td>
+                        <td style="text-align: center;"><a style="text-decoration:none;color:inherit;" onclick=send("301025");>301025</a></td>
                         <td style="text-align: center;">读客文化</td>
                         <td style="text-align: center;">1.82</td>
                         <td style="text-align: center;">0.73</td>
                         <td style="text-align: center;">0.99</td>
                         <td style="text-align: center;">-1.21</td>
                         <td style="text-align: center;">0.81</td>
-                        <td>201←231←148</td>
+                        <td>182←231←148</td>
                         <td>图书发行 版权</td>
                     </tr>
                     
                     <tr>
-                        <td style="text-align: center;">001382</td>
+                        <td style="text-align: center;"><a style="text-decoration:none;color:inherit;" onclick=send("001382");>001382</a></td>
                         <td style="text-align: center;">新亚电缆</td>
                         <td style="text-align: center;">1.72</td>
                         <td style="text-align: center;">0.65</td>
                         <td style="text-align: center;">0.93</td>
                         <td style="text-align: center;">-0.09</td>
                         <td style="text-align: center;">0.84</td>
-                        <td>67←66←44</td>
+                        <td>65←66←44</td>
                         <td>电线电缆 机器人电缆 核电 次新股</td>
                     </tr>
                     
                     <tr>
-                        <td style="text-align: center;">300963</td>
+                        <td style="text-align: center;"><a style="text-decoration:none;color:inherit;" onclick=send("300963");>300963</a></td>
                         <td style="text-align: center;">中洲特材</td>
                         <td style="text-align: center;">1.69</td>
                         <td style="text-align: center;">0.68</td>
                         <td style="text-align: center;">0.92</td>
                         <td style="text-align: center;">-0.13</td>
                         <td style="text-align: center;">0.85</td>
-                        <td>215←246←262</td>
+                        <td>217←246←262</td>
                         <td>核电 海工装备 焊材</td>
                     </tr>
                     
                     <tr>
-                        <td style="text-align: center;">603353</td>
+                        <td style="text-align: center;"><a style="text-decoration:none;color:inherit;" onclick=send("603353");>603353</a></td>
                         <td style="text-align: center;">和顺石油</td>
                         <td style="text-align: center;">2.70</td>
                         <td style="text-align: center;">0.69</td>
                         <td style="text-align: center;">0.89</td>
                         <td style="text-align: center;">0.96</td>
                         <td style="text-align: center;">1.16</td>
-                        <td>88←92←80</td>
+                        <td>97←92←80</td>
                         <td>华为超充 加油站 光伏</td>
                     </tr>
                     
                     <tr>
-                        <td style="text-align: center;">003010</td>
+                        <td style="text-align: center;"><a style="text-decoration:none;color:inherit;" onclick=send("003010");>003010</a></td>
                         <td style="text-align: center;">若羽臣</td>
                         <td style="text-align: center;">3.41</td>
                         <td style="text-align: center;">0.65</td>
                         <td style="text-align: center;">0.89</td>
                         <td style="text-align: center;">0.83</td>
                         <td style="text-align: center;">1.27</td>
-                        <td>152←118←87</td>
+                        <td>146←118←87</td>
                         <td>电商 消费品 年报预增</td>
                     </tr>
                     
                     <tr>
-                        <td style="text-align: center;">301082</td>
+                        <td style="text-align: center;"><a style="text-decoration:none;color:inherit;" onclick=send("301082");>301082</a></td>
                         <td style="text-align: center;">久盛电气</td>
                         <td style="text-align: center;">3.19</td>
                         <td style="text-align: center;">0.71</td>
                         <td style="text-align: center;">0.88</td>
                         <td style="text-align: center;">0.61</td>
                         <td style="text-align: center;">1.23</td>
-                        <td>75←80←71</td>
+                        <td>78←80←71</td>
                         <td>核电 防火类特种电缆 电力电缆</td>
                     </tr>
                     
                     <tr>
-                        <td style="text-align: center;">603270</td>
+                        <td style="text-align: center;"><a style="text-decoration:none;color:inherit;" onclick=send("603270");>603270</a></td>
                         <td style="text-align: center;">金帝股份</td>
                         <td style="text-align: center;">0.82</td>
                         <td style="text-align: center;">0.68</td>
                         <td style="text-align: center;">0.88</td>
                         <td style="text-align: center;">-2.13</td>
                         <td style="text-align: center;">0.47</td>
-                        <td>406←426←454</td>
+                        <td>372←426←454</td>
                         <td>机器人 减速器 轴承保持架 风电</td>
                     </tr>
                     
                     <tr>
-                        <td style="text-align: center;">871396</td>
+                        <td style="text-align: center;"><a style="text-decoration:none;color:inherit;" onclick=send("871396");>871396</a></td>
                         <td style="text-align: center;">常辅股份</td>
                         <td style="text-align: center;">7.66</td>
                         <td style="text-align: center;">0.70</td>
                         <td style="text-align: center;">0.86</td>
                         <td style="text-align: center;">1.03</td>
                         <td style="text-align: center;">2.16</td>
-                        <td>282←326←350</td>
+                        <td>276←326←350</td>
                         <td>核电 阀门 年报预增</td>
                     </tr>
                     
                     <tr>
-                        <td style="text-align: center;">002755</td>
+                        <td style="text-align: center;"><a style="text-decoration:none;color:inherit;" onclick=send("002755");>002755</a></td>
                         <td style="text-align: center;">奥赛康</td>
                         <td style="text-align: center;">1.66</td>
                         <td style="text-align: center;">0.66</td>
                         <td style="text-align: center;">0.84</td>
                         <td style="text-align: center;">0.28</td>
                         <td style="text-align: center;">0.86</td>
-                        <td>242←214←292</td>
+                        <td>228←214←292</td>
                         <td>创新药 抗癌治癌 幽门螺杆菌</td>
                     </tr>
                     
                     <tr>
-                        <td style="text-align: center;">600128</td>
+                        <td style="text-align: center;"><a style="text-decoration:none;color:inherit;" onclick=send("600128");>600128</a></td>
                         <td style="text-align: center;">苏豪弘业</td>
                         <td style="text-align: center;">0.77</td>
                         <td style="text-align: center;">0.73</td>
                         <td style="text-align: center;">0.84</td>
                         <td style="text-align: center;">-1.21</td>
                         <td style="text-align: center;">0.57</td>
-                        <td>160←136←216</td>
+                        <td>153←136←216</td>
                         <td>AI玩具 跨境电商 参股弘业期货 江苏国资</td>
                     </tr>
                     
