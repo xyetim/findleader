@@ -281,7 +281,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (nameIndexMap.has(name)) {
                     const index = nameIndexMap.get(name);
                     // 计算动态颜色值，限制最大值为255
-                    const redValue = Math.min(155 + ((index + 1) / 10) * 100, 255);
+                    const redValue = Math.min(55 + ((index + 1) / 10) * 200, 255);
                     td.style.color = `rgb(${redValue}, 0, 0)`;
                     td.style.fontWeight = 'bold';
                 }
