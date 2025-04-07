@@ -254,52 +254,46 @@
                 <div>盘中更新排名周期为3分钟</div>
                   <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // 获取两个表格
     const tables = document.getElementsByTagName('table');
     if (tables.length < 2) return;
-    
+
     // 提取名称函数
     function getNames(table) {
-        const names = [];
-        const rows = table.querySelectorAll('tr');
-        rows.forEach((row, index) => {
-            if (index > 0) { // 跳过标题行
-                const nameTd = row.querySelectorAll('td')[1];
-                if (nameTd) names.push(nameTd.textContent.trim());
-            }
-        });
-        return names;
+        return Array.from(table.querySelectorAll('tr td:nth-child(2)'), 
+                        td => td.textContent.trim()).slice(1); // 跳过标题行
     }
 
-    // 获取两个表格的名称列表
     const names1 = getNames(tables[0]);
     const names2 = getNames(tables[1]);
+    const commonNames = [...new Set(names1.filter(name => names2.includes(name)))];
 
-    // 计算共同名称
-    const commonNames = names1.filter(name => names2.includes(name));
+    // 创建名称到索引的映射
+    const nameIndexMap = new Map();
+    commonNames.forEach((name, index) => {
+        nameIndexMap.set(name, index);
+    });
 
     // 高亮处理函数
-    function highlightNames(table, commonNames) {
-        const rows = table.querySelectorAll('tr');
-        rows.forEach((row, index) => {
-            if (index > 0) { // 跳过标题行
-                const nameTd = row.querySelectorAll('td')[1];
-                if (nameTd) {
-                    const name = nameTd.textContent.trim();
-                    if (commonNames.includes(name)) {
-                        nameTd.style.color = 'red';
-                        nameTd.style.fontWeight = 'bold'; // 增强视觉效果
-                    }
+    function highlightNames(table) {
+        Array.from(table.querySelectorAll('tr td:nth-child(2)')).slice(1)
+            .forEach(td => {
+                const name = td.textContent.trim();
+                if (nameIndexMap.has(name)) {
+                    const index = nameIndexMap.get(name);
+                    // 计算动态颜色值，限制最大值为255
+                    const redValue = Math.min(155 + ((index + 1) / 10) * 100, 255);
+                    td.style.color = `rgb(${redValue}, 0, 0)`;
+                    td.style.fontWeight = 'bold';
                 }
-            }
-        });
+            });
     }
 
     // 应用高亮
-    highlightNames(tables[0], commonNames);
-    highlightNames(tables[1], commonNames);
+    highlightNames(tables[0]);
+    highlightNames(tables[1]);
 });
 </script>
+
 
                 </body>
                 </html>
