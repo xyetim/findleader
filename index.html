@@ -21,7 +21,7 @@
                 }
                 </script>
                 <body>
-                <h3>热股综合排名 [04-07 16:47]</h3>
+                <h3>热股综合排名 [04-07 17:37]</h3>
                 <table id="hot">
                     <tr>
                         <th>代码</th>
@@ -71,7 +71,7 @@
                         <td style="text-align: center;">0.64</td>
                         <td style="text-align: center;">0.00</td>
                         <td style="text-align: center;">1.36</td>
-                        <td style="text-align: center;">79←143←139</td>
+                        <td style="text-align: center;">81←143←139</td>
                         <td>化学原料 电子化学品</td>
                     </tr>
                     
@@ -97,7 +97,7 @@
                         <td style="text-align: center;">0.61</td>
                         <td style="text-align: center;">0.47</td>
                         <td style="text-align: center;">0.97</td>
-                        <td style="text-align: center;">830←996←1011</td>
+                        <td style="text-align: center;">845←996←1011</td>
                         <td>-</td>
                     </tr>
                     
@@ -110,7 +110,7 @@
                         <td style="text-align: center;">0.86</td>
                         <td style="text-align: center;">0.88</td>
                         <td style="text-align: center;">0.97</td>
-                        <td style="text-align: center;">10←17←32</td>
+                        <td style="text-align: center;">8←17←32</td>
                         <td>港口航运 国企</td>
                     </tr>
                     
@@ -149,7 +149,7 @@
                         <td style="text-align: center;">0.90</td>
                         <td style="text-align: center;">0.64</td>
                         <td style="text-align: center;">0.79</td>
-                        <td style="text-align: center;">20←41←47</td>
+                        <td style="text-align: center;">18←41←47</td>
                         <td>养鸡 猪肉 预制菜</td>
                     </tr>
                     
@@ -162,13 +162,13 @@
                         <td style="text-align: center;">0.85</td>
                         <td style="text-align: center;">1.00</td>
                         <td style="text-align: center;">0.77</td>
-                        <td style="text-align: center;">15←2←6</td>
+                        <td style="text-align: center;">12←2←6</td>
                         <td>适时调高美国市场产品售价 兽药 动物保健品</td>
                     </tr>
                     
                 </table>
 
-                <h3>热股抗跌排名 [04-07 16:47]</h3>
+                <h3>热股抗跌排名 [04-07 17:37]</h3>
                 <table id="die">
                     <tr>
                         <th>代码</th>
@@ -231,7 +231,7 @@
                         <td style="text-align: center;">0.90</td>
                         <td style="text-align: center;">0.64</td>
                         <td style="text-align: center;">0.79</td>
-                        <td style="text-align: center;">20←41←47</td>
+                        <td style="text-align: center;">18←41←47</td>
                         <td>养鸡 猪肉 预制菜</td>
                     </tr>
                     
@@ -270,7 +270,7 @@
                         <td style="text-align: center;">0.86</td>
                         <td style="text-align: center;">0.88</td>
                         <td style="text-align: center;">0.97</td>
-                        <td style="text-align: center;">10←17←32</td>
+                        <td style="text-align: center;">8←17←32</td>
                         <td>港口航运 国企</td>
                     </tr>
                     
@@ -306,9 +306,8 @@
                 const name = td.textContent.trim();
                 if (nameIndexMap.has(name)) {
                 const index = nameIndexMap.get(name);
-                // 计算动态颜色值，限制最大值为255
-                const redValue = Math.min(155 + Math.round(((index + 1) / 5) * 100), 255);
-                td.style.color = `rgb(${redValue}, 0, 0)`;
+                const colorValue = Math.round((index * 360) / commonNames.length);
+                td.style.color = `hsl(${colorValue}, 80%, 50%)`;
                 td.style.fontWeight = 'bold';
                 }
                 });
